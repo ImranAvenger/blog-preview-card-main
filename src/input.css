@@ -44,11 +44,11 @@
 /* styles.css */
 
 .card {
-  width: min(100%, 24rem);
+  width: min(100%, 25rem);
 }
 
 .shadow-right-bottom {
-  box-shadow: 10px 10px 0 hsl(0, 0%, 7%);
+  box-shadow: 8px 8px 0 hsl(0, 0%, 7%);
 }
 
 

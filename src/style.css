@@ -175,9 +175,6 @@
   }
 }
 @layer utilities {
-  .relative {
-    position: relative;
-  }
   .static {
     position: static;
   }
@@ -248,8 +245,8 @@
     border-style: var(--tw-border-style);
     border-width: 2px;
   }
-  .border-gray-950 {
-    border-color: var(--color-gray-950);
+  .border-gray-500 {
+    border-color: var(--color-gray-500);
   }
   .bg-\(--yellow\) {
     background-color: var(--yellow);
@@ -257,14 +254,8 @@
   .bg-white {
     background-color: var(--color-white);
   }
-  .p-4 {
-    padding: calc(var(--spacing) * 4);
-  }
   .p-6 {
     padding: calc(var(--spacing) * 6);
-  }
-  .p-8 {
-    padding: calc(var(--spacing) * 8);
   }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
@@ -300,6 +291,10 @@
   .shadow-lg {
     --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
   .transition-shadow {
     transition-property: box-shadow;
@@ -359,10 +354,10 @@
   }
 }
 .card {
-  width: min(100%, 24rem);
+  width: min(100%, 25rem);
 }
 .shadow-right-bottom {
-  box-shadow: 10px 10px 0 hsl(0, 0%, 7%);
+  box-shadow: 8px 8px 0 hsl(0, 0%, 7%);
 }
 @property --tw-rotate-x {
   syntax: "*";
@@ -458,6 +453,11 @@
   inherits: false;
   initial-value: 0 0 #0000;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -482,6 +482,7 @@
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-outline-style: solid;
     }
   }
 }
