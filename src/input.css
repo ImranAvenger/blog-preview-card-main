@@ -35,8 +35,10 @@
     --yellow: hsl(47, 88%, 63%); 
 }
 /* Use Figtree as the default sans font throughout */
-@theme {
-  --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+@layer base {
+  :root {
+    --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
 }
 
 /* styles.css */
